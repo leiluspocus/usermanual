@@ -1,0 +1,8 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Question 1 - User Manual}{2}
+\contentsline {section}{\numberline {3}Question 2 - ShowHide}{3}
+\contentsline {section}{\numberline {4}Question 3 - Some screenshots of the two applications}{3}
+\contentsline {subsection}{\numberline {4.1}User Manual}{3}
+\contentsline {subsection}{\numberline {4.2}Show/Hide Application}{5}
+\contentsline {subsection}{\numberline {4.3}Customized icons for the two applications}{6}

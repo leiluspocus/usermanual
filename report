@@ -1,0 +1,98 @@
+\documentclass[a4paper, 12pt, final]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[french]{varioref}
+\usepackage{layout} 
+\usepackage{listings} 
+\usepackage[comma,authoryear]{natbib}
+\usepackage{graphicx}
+\usepackage{float}
+
+\title{ ELE 470 - Midterm }
+
+\author{ Laïla Atrmouh }
+
+\date{Tuesday 23 October 2012}
+
+\begin{document}
+
+\maketitle  
+
+\rule[0.5ex]{\textwidth}{0.1mm}
+    
+  
+\section{Introduction}  
+For this first midterm, we had to develop two applications: a usermanual and an other application with an image and two buttons. For this second application, I decided to develop a simple application that shows or hide an image, according to the button we push. The code is available online on my github repository: http://github.com/leiluspocus/usermanual \\
+
+\section{Question 1 - User Manual}
+I decided to use the table list view. We never saw it in lab, but I thought that it was the most user-friendly tool to display a list of tutorials.  Indeed, there are a lot of advantages using Table List Views for this kind of applications :
+\begin {itemize}
+\item \textbf{A user can slide on a Table View} \\ 
+	 Therefore, it is possible to put a long list of tutorials, Apple has already developed a very user-friendly feature to show a long list of items. We take advantage of the sliding feature.
+\item \textbf{Better view of all the phases of learning} \\
+	Indeed, the user can see what are the next steps in his learning of developping applications.
+\item \textbf{Logic of dependency between the items} \\
+	All the tutorials are ordered by difficulty. A beginner will start with the first rows of the table list, and an advanced user will prefer the last rows of the table list.
+\end{itemize}
+Each row of the table represents a tutorial. On the list, there is a subtitle for each tutorial to describe it quickly. There is also an image next to each tutorial in order to customize a little the table list. \\
+When the user selects a tutorial, an ActionSheet is displayed to remind him that he should have followed the previous tutorials before following this one. An ameliorationcan be added on this ActionSheet. Currently, the tutorial is showed even if the actionsheet is not closed. I didn't want to prevent the user from looking at the next tutorial if he didn't follow the previous one. Indeed, I thought that it would be too restrictive for the user. But I should have put a fancy transition, in order to wait for the answer of the user before showing the tutorial. I didn't find how to get the user answer from the action sheet, that's why I didn't develop it.\\
+The most tricky thing in the application was to handle the view switching. Indeed, I learned too late that the replace of views must be done using the method addSubview. If you don't use this method, there is a bug with the load of bundles. \\
+Once the tutorial is viewed by the user, the user can go back to the main list of tutorials. Therefore, he can easily switch between the different tutorials.
+
+
+\section{Question 2 - ShowHide}
+This simple application is composed of an image and two buttons "Show" and "Hide". When the "Show" button is pressed, the image is showed. When the "Hide" button is pressed, the image is hidden. \\This code can be reused in games for example: using the property "hidden" of UIImageView, we can develop a game that shows the question and hide the answer, and once the user presses the button to see the answer, the answer is showed.
+
+\section{Some screenshots of the two applications}
+
+\subsection{User Manual}
+\begin{figure}[H] %on ouvre l'environnement figure
+\centering
+\includegraphics[width=5cm]{1.jpg} %ou image.png, .jpeg etc.
+\caption{First view of the user manual with the whole list of tutorials} %la légende
+\label{api} %l'étiquette pour faire référence à cette image
+\end{figure} %on ferme l'environnement figure
+
+
+\begin{figure}[H] %on ouvre l'environnement figure
+\centering
+\includegraphics[width=5cm]{2.jpg} %ou image.png, .jpeg etc.
+\caption{First Tutorial - Installing XCode (No prerequisites implies No ActionSheet)} %la légende
+\label{api} %l'étiquette pour faire référence à cette image
+\end{figure} %on ferme l'environnement figure
+
+ 
+\begin{figure}[H] %on ouvre l'environnement figure
+\centering
+\includegraphics[width=5cm]{3.jpg} %ou image.png, .jpeg etc.
+\caption{Example of actionsheet that reminds the user to follow the previous tutorials} %la légende
+\label{api} %l'étiquette pour faire référence à cette image
+\end{figure} %on ferme l'environnement figure
+
+  
+\subsection{Show/Hide Application}
+\begin{figure}[H] %on ouvre l'environnement figure
+\centering
+\includegraphics[width=5cm]{4.jpg} %ou image.png, .jpeg etc.
+\caption{Main view of the show hide application - An image and two buttons} %la légende
+\label{api} %l'étiquette pour faire référence à cette image
+\end{figure} %on ferme l'environnement figure
+
+
+\begin{figure}[H] %on ouvre l'environnement figure
+\centering
+\includegraphics[width=5cm]{5.jpg} %ou image.png, .jpeg etc.
+\caption{View after pushing the "Hide" Button} %la légende
+\label{api} %l'étiquette pour faire référence à cette image
+\end{figure} %on ferme l'environnement figure
+ 
+\subsection{Customized icons for the two applications}
+\begin{figure}[H] %on ouvre l'environnement figure
+\centering
+\includegraphics[width=5cm]{6.jpg} %ou image.png, .jpeg etc.
+\caption{The customized icons of the user manual and the show/hide applications} %la légende
+\label{api} %l'étiquette pour faire référence à cette image
+\end{figure} %on ferme l'environnement figure
+
+\end{document}
